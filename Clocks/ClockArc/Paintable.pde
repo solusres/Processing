@@ -1,0 +1,3 @@
+interface Paintable {
+  void paint(); 
+}

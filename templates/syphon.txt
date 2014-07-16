@@ -1,0 +1,22 @@
+import codeanticode.syphon.*;
+
+SyphonServer server;
+
+int SIZE = 500;
+
+void setup() {
+  size(SIZE, SIZE, OPENGL);
+  smooth(8);
+  
+  server = new SyphonServer(this, "Processing Syphon");
+}
+
+void draw() {
+  background(0);
+
+  server.sendScreen();
+
+  if (frameCount % 30 == 0) {
+    frame.setTitle("FPS : " + nf(frameRate, 2, 4));
+  }
+}

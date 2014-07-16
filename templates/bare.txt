@@ -1,0 +1,16 @@
+int SIZE = 500;
+
+void setup() {
+  size(SIZE, SIZE, P2D);
+  smooth(8);
+
+  
+}
+
+void draw() {
+  background(0);
+  
+  if (frameCount % 30 == 0) {
+    frame.setTitle("FPS : " + nf(frameRate, 2, 4));
+  }   
+}
